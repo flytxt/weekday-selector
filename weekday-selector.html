@@ -19,16 +19,16 @@ Custom property | Description | Default
 @demo demo/index.html
 -->
 <dom-module id="weekday-selector">
-  <style is="custom-style">
-    :host {
-      @apply(--weekday-selector);
-    }
-
-    paper-checkbox {
-      @apply(--weekday-selector-checkbox);
-    }
-  </style>
   <template>
+	<style is="custom-style">
+	  :host {
+	    @apply(--weekday-selector);
+	  }
+
+	  paper-checkbox {
+	      @apply(--weekday-selector-checkbox);
+	    }
+	  </style>
     <template is="dom-repeat" items="[[ _weekDays ]]" as="weekDay">
       <paper-checkbox checked="{{ weekDay.checked }}" on-iron-change="_setValue">[[ weekDay.label ]]</paper-checkbox>
     </template>
